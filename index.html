@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Loving Memory of Liz & Carle</title>
+    <style>
+        /* --- FONTS & COLORS --- */
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap');
+
+        :root {
+            --bg-color: #f9f7f2; /* Soft Cream */
+            --text-color: #4a4a4a; /* Dark Gray */
+            --accent-color: #8c7b75; /* Muted Taupe */
+            --highlight: #d4af37; /* Subtle Gold */
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .quote, .tribute-text, .audio-title {
+            font-family: 'Lora', serif;
+        }
+
+        /* --- HERO SECTION --- */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .hero-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid var(--bg-color);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: var(--text-color);
+        }
+
+        .dates {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-top: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            z-index: 100;
+            border-bottom: 1px solid #eee;
+            backdrop-filter: blur(5px);
+        }
+
+        button {
+            background: none;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            color: var(--accent-color);
+            padding: 10px 20px;
+            transition: 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+
+        button:hover, button.active {
+            color: var(--text-color);
+            border-bottom: 2px solid var(--highlight);
+        }
+
+        /* --- CONTENT SECTIONS --- */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: none;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .container.active {
+            display: block;
+        }
+
+        .bio-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 50px;
+            align-items: center;
+        }
+
+        .bio-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .bio-portrait {
+            flex: 0 0 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 10px 10px 0px var(--accent-color);
+        }
+
+        .reverse .bio-section {
+            flex-direction: row-reverse;
+        }
+
+        .quote {
+            font-size: 1.4rem;
+            font-style: italic;
+            text-align: center;
+            margin: 40px 0;
+            color: var(--accent-color);
+        }
+
+        .section-header {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            color: var(--text-color);
+            opacity: 0.7;
+            text-transform:
