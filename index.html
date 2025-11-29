@@ -42,7 +42,7 @@
             height: 250px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: top;
+            object-position: top; /* Keeps heads visible */
             margin-bottom: 20px;
             border: 4px solid var(--bg-color);
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -349,8 +349,8 @@
         const GITHUB_USERNAME = 'lizandcarle'; 
         const REPO_NAME = 'memorial'; 
         
-        // --- CHANGE TO TRUE BEFORE UPLOADING TO GITHUB ---
-        const USE_GITHUB_DATA = false; 
+        // --- THIS IS THE "FOREVER" SETTING. DO NOT CHANGE. ---
+        const USE_GITHUB_DATA = true; 
 
         // ==========================================
 
@@ -369,17 +369,10 @@
             return array;
         }
 
-        // --- NEW: BIO LOADER (Single Text File) ---
+        // --- BIO LOADER ---
         async function loadBio(filename, elementId) {
             const container = document.getElementById(elementId);
             
-            if (!USE_GITHUB_DATA || !GITHUB_USERNAME || !REPO_NAME) {
-                // Demo text if running locally
-                container.innerHTML = "<p>This is a placeholder for the biography. Create a text file in the 'bios' folder to see your real story here.</p>";
-                return;
-            }
-
-            // We must fetch the file info first to get the download URL
             const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/bios/${filename}`;
 
             try {
@@ -387,15 +380,12 @@
                 if (!response.ok) throw new Error('Bio not found');
                 
                 const fileData = await response.json();
-                
-                // Now fetch the raw text content
                 const textResponse = await fetch(fileData.download_url);
                 const textContent = await textResponse.text();
 
-                // Convert new lines to paragraph tags for nice formatting
                 const formattedText = textContent
                     .split('\n')
-                    .filter(line => line.trim() !== '') // Remove empty lines
+                    .filter(line => line.trim() !== '') 
                     .map(line => `<p>${line}</p>`)
                     .join('');
 
@@ -412,8 +402,6 @@
             const container = document.getElementById(elementId);
             const header = document.getElementById('header-' + elementId);
             container.innerHTML = '';
-
-            if (!USE_GITHUB_DATA || !GITHUB_USERNAME || !REPO_NAME) return;
 
             const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/audio/${folderName}`;
 
@@ -466,20 +454,6 @@
             const container = document.getElementById(elementId);
             container.innerHTML = ''; 
 
-            if (!USE_GITHUB_DATA || !GITHUB_USERNAME || !REPO_NAME) {
-                const demoQuotes = [
-                    { text: "He always had a joke ready for any situation.", author: "Uncle Bob" },
-                    { text: "A quiet soul who spoke volumes.", author: "ANON" }
-                ];
-                shuffle(demoQuotes).forEach(q => {
-                    let authorHtml = '';
-                    if (!q.author.toUpperCase().startsWith('ANON')) authorHtml = `<div class="tribute-author">— ${q.author}</div>`;
-                    const html = `<div class="tribute-card"><div class="tribute-text">"${q.text}"</div>${authorHtml}</div>`;
-                    container.innerHTML += html;
-                });
-                return;
-            }
-
             const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/tributes/${folderName}`;
             
             try {
@@ -507,17 +481,6 @@
         // --- IMAGE LOADER ---
         async function loadImages(folderName, elementId) {
             const container = document.getElementById(elementId);
-            
-            if (!USE_GITHUB_DATA || !GITHUB_USERNAME || !REPO_NAME) {
-                const demoImages = ['https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400','https://images.unsplash.com/photo-1516233758813-a38d024919c5?w=400'];
-                shuffle(demoImages).forEach(url => {
-                    const img = document.createElement('img');
-                    img.src = url;
-                    container.appendChild(img);
-                });
-                return;
-            }
-
             const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/images/${folderName}`;
 
             try {
@@ -538,7 +501,6 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Load Content
             loadBio('couple.txt', 'bio-content-couple');
             loadBio('her.txt', 'bio-content-her');
             loadBio('him.txt', 'bio-content-him');
