@@ -10,528 +10,528 @@
     
     <script type="application/ld+json">
     {
-    "@context": "https://schema.org",
-    "@type": "Memorial",
-    "name": "Memorial for Liz & Carle Duguid",
-    "description": "Obituary and photo gallery for Liz and Carle Duguid.",
-    "url": "https://lizandcarle.ca",
-    "sameAs": [
-    "https://lizandcarle.github.io/memorial/"
-    ]
+      "@context": "https://schema.org",
+      "@type": "Memorial",
+      "name": "Memorial for Liz & Carle Duguid",
+      "description": "Obituary and photo gallery for Liz and Carle Duguid.",
+      "url": "https://lizandcarle.ca",
+      "sameAs": [
+        "https://lizandcarle.github.io/memorial/"
+      ]
     }
     </script>
 
     <title>In Loving Memory of Liz & Carle</title>
     <style>
-    /* --- FONTS & COLORS --- */
-    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap');
+        /* --- FONTS & COLORS --- */
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap');
 
-    :root {
-    --bg-color: #f9f7f2; /* Soft Cream */
-    --text-color: #4a4a4a; /* Dark Gray */
-    --accent-color: #8c7b75; /* Muted Taupe */
-    --highlight: #d4af37; /* Subtle Gold */
-    --card-bg: #ffff;
-    }
+        :root {
+            --bg-color: #f9f7f2; /* Soft Cream */
+            --text-color: #4a4a4a; /* Dark Gray */
+            --accent-color: #8c7b75; /* Muted Taupe */
+            --highlight: #d4af37; /* Subtle Gold */
+            --card-bg: #ffffff;
+        }
 
-    body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
-    h1, h2, h3, .quote, .tribute-text, .audio-title {
-    font-family: 'Lora', serif;
-    }
+        h1, h2, h3, .quote, .tribute-text, .audio-title {
+            font-family: 'Lora', serif;
+        }
 
-    /* --- HERO SECTION --- */
-    header {
-    text-align: center;
-    padding: 60px 20px;
-    background: white;
-    border-bottom: 1px solid #e0e0e0;
-    }
+        /* --- HERO SECTION --- */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+        }
 
-    .hero-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: top; /* Keeps heads visible */
-    margin-bottom: 20px;
-    border: 4px solid var(--bg-color);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+        .hero-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top; /* Keeps heads visible */
+            margin-bottom: 20px;
+            border: 4px solid var(--bg-color);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
 
-    h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    color: var(--text-color);
-    }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: var(--text-color);
+        }
 
-    .dates {
-    font-size: 0.9rem;
-    color: var(--accent-color);
-    margin-top: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    }
+        .dates {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-top: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
 
-    /* --- NAVIGATION --- */
-    nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-    position: sticky;
-    top: 0;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 15px;
-    z-index: 100;
-    border-bottom: 1px solid #eee;
-    backdrop-filter: blur(5px);
-    }
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            z-index: 100;
+            border-bottom: 1px solid #eee;
+            backdrop-filter: blur(5px);
+        }
 
-    button {
-    background: none;
-    border: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    color: var(--accent-color);
-    padding: 10px 20px;
-    transition: 0.3s;
-    border-bottom: 2px solid transparent;
-    }
+        button {
+            background: none;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            color: var(--accent-color);
+            padding: 10px 20px;
+            transition: 0.3s;
+            border-bottom: 2px solid transparent;
+        }
 
-    button:hover, button.active {
-    color: var(--text-color);
-    border-bottom: 2px solid var(--highlight);
-    }
+        button:hover, button.active {
+            color: var(--text-color);
+            border-bottom: 2px solid var(--highlight);
+        }
 
-    /* --- CONTENT SECTIONS --- */
-    .container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: none;
-    animation: fadeIn 0.8s ease;
-    }
+        /* --- CONTENT SECTIONS --- */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: none;
+            animation: fadeIn 0.8s ease;
+        }
 
-    .container.active {
-    display: block;
-    }
+        .container.active {
+            display: block;
+        }
 
-    .bio-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-bottom: 50px;
-    align-items: center;
-    }
+        .bio-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 50px;
+            align-items: center;
+        }
 
-    .bio-text {
-    flex: 1;
-    min-width: 300px;
-    }
+        .bio-text {
+            flex: 1;
+            min-width: 300px;
+        }
 
-    .bio-portrait {
-    flex: 0 0 300px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 10px 10px 0px var(--accent-color);
-    }
+        .bio-portrait {
+            flex: 0 0 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 10px 10px 0px var(--accent-color);
+        }
 
-    .reverse .bio-section {
-    flex-direction: row-reverse;
-    }
+        .reverse .bio-section {
+            flex-direction: row-reverse;
+        }
 
-    .quote {
-    font-size: 1.4rem;
-    font-style: italic;
-    text-align: center;
-    margin: 40px 0;
-    color: var(--accent-color);
-    }
+        .quote {
+            font-size: 1.4rem;
+            font-style: italic;
+            text-align: center;
+            margin: 40px 0;
+            color: var(--accent-color);
+        }
 
-    .section-header {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    color: var(--text-color);
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-    }
+        .section-header {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            color: var(--text-color);
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
 
-    /* --- AUDIO CARDS --- */
-    .audio-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
-    }
+        /* --- AUDIO CARDS --- */
+        .audio-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
 
-    .audio-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
-    }
+        .audio-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
 
-    .audio-title {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: var(--text-color);
-    }
+        .audio-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
 
-    .audio-desc {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 15px;
-    font-style: italic;
-    }
+        .audio-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
 
-    audio {
-    width: 100%;
-    height: 40px;
-    }
+        audio {
+            width: 100%;
+            height: 40px;
+        }
 
-    /* --- TRIBUTE BUBBLES --- */
-    .tributes-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin: 50px 0;
-    }
+        /* --- TRIBUTE BUBBLES --- */
+        .tributes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 50px 0;
+        }
 
-    .tribute-card {
-    background: var(--card-bg);
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.03);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    }
+        .tribute-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-    .tribute-text {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #555;
-    margin-bottom: 15px;
-    }
+        .tribute-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+        }
 
-    .tribute-author {
-    text-align: right;
-    font-size: 0.85rem;
-    color: var(--accent-color);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: auto;
-    }
+        .tribute-author {
+            text-align: right;
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: auto;
+        }
 
-    /* --- MASONRY GALLERY --- */
-    .masonry {
-    column-count: 3;
-    column-gap: 20px;
-    }
+        /* --- MASONRY GALLERY --- */
+        .masonry {
+            column-count: 3;
+            column-gap: 20px;
+        }
 
-    .masonry img {
-    width: 100%;
-    break-inside: avoid;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    transition: transform 0.2s;
-    background: #e0e0e0;
-    }
+        .masonry img {
+            width: 100%;
+            break-inside: avoid;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            transition: transform 0.2s;
+            background: #e0e0e0;
+        }
 
-    .masonry img:hover {
-    transform: scale(1.02);
-    }
+        .masonry img:hover {
+            transform: scale(1.02);
+        }
 
-    @media (max-width: 768px) {
-    .masonry { column-count: 2; }
-    .bio-section { flex-direction: column !important; }
-    .bio-portrait { width: 100%; height: auto; }
-    }
+        @media (max-width: 768px) {
+            .masonry { column-count: 2; }
+            .bio-section { flex-direction: column !important; }
+            .bio-portrait { width: 100%; height: auto; }
+        }
 
-    @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-    }
-    
-    footer {
-    text-align: center;
-    font-size: 0.8rem;
-    padding: 40px;
-    color: #999;
-    border-top: 1px solid #eee;
-    }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            padding: 40px;
+            color: #999;
+            border-top: 1px solid #eee;
+        }
     </style>
 </head>
 <body>
 
     <header>
-    <img src="hero-couple.jpg" alt="Liz and Carle Duguid together" class="hero-img">
-    <h1>Liz & Carle Duguid</h1>
-    <div class="dates">Forever in our hearts</div>
+        <img src="hero-couple.jpg" alt="Liz and Carle Duguid together" class="hero-img">
+        <h1>Liz & Carle Duguid</h1>
+        <div class="dates">Forever in our hearts</div>
     </header>
 
     <nav>
-    <button onclick="showSection('couple')" class="active" id="btn-couple">Together</button>
-    <button onclick="showSection('her')" id="btn-her">Liz</button>
-    <button onclick="showSection('him')" id="btn-him">Carle</button>
+        <button onclick="showSection('couple')" class="active" id="btn-couple">Together</button>
+        <button onclick="showSection('her')" id="btn-her">Liz</button>
+        <button onclick="showSection('him')" id="btn-him">Carle</button>
     </nav>
 
     <div id="couple" class="container active">
-    
-    <div class="bio-section">
-    <div class="bio-text">
-    <h2>Our Story</h2>
-    <div id="bio-content-couple">Loading story...</div>
-    </div>
-    </div>
+        
+        <div class="bio-section">
+            <div class="bio-text">
+                <h2>Our Story</h2>
+                <div id="bio-content-couple">Loading story...</div>
+            </div>
+        </div>
 
-    <div class="section-header" id="header-audio-couple" style="display:none">Audio & Music</div>
-    <div class="audio-container" id="audio-couple"></div>
+        <div class="section-header" id="header-audio-couple" style="display:none">Audio & Music</div>
+        <div class="audio-container" id="audio-couple"></div>
 
-    <div class="section-header">Thoughts from Family & Friends</div>
-    <div class="tributes-container" id="tributes-couple"></div>
+        <div class="section-header">Thoughts from Family & Friends</div>
+        <div class="tributes-container" id="tributes-couple"></div>
 
-    <div class="section-header">Gallery</div>
-    <div class="masonry" id="gallery-couple"></div>
+        <div class="section-header">Gallery</div>
+        <div class="masonry" id="gallery-couple"></div>
     </div>
 
     <div id="her" class="container">
-    <div class="bio-section">
-    <img src="hero-liz.jpg" class="bio-portrait" alt="Liz">
-    <div class="bio-text">
-    <h2>Liz's Story</h2>
-    <p><strong>October 23, 1947 – May 31, 2023</strong></p> 
-    <div id="bio-content-her">Loading story...</div>
-    </div>
-    </div>
+        <div class="bio-section">
+            <img src="hero-liz.jpg" class="bio-portrait" alt="Liz">
+            <div class="bio-text">
+                <h2>Liz's Story</h2>
+                <p><strong>October 23, 1947 – May 31, 2023</strong></p> 
+                <div id="bio-content-her">Loading story...</div>
+            </div>
+        </div>
 
-    <div class="section-header" id="header-audio-her" style="display:none">Audio Memories</div>
-    <div class="audio-container" id="audio-her"></div>
+        <div class="section-header" id="header-audio-her" style="display:none">Audio Memories</div>
+        <div class="audio-container" id="audio-her"></div>
 
-    <div class="section-header">Remembering Liz</div>
-    <div class="tributes-container" id="tributes-her"></div>
+        <div class="section-header">Remembering Liz</div>
+        <div class="tributes-container" id="tributes-her"></div>
 
-    <div class="section-header">Gallery</div>
-    <div class="masonry" id="gallery-her"></div>
+        <div class="section-header">Gallery</div>
+        <div class="masonry" id="gallery-her"></div>
     </div>
 
     <div id="him" class="container reverse">
-    <div class="bio-section">
-    <div class="bio-text">
-    <h2>Carle's Story</h2>
-    <p><strong>July 9, 1948 – March 18, 2022</strong></p>
-    <div id="bio-content-him">Loading story...</div>
-    </div>
-    <img src="hero-carle.jpg" class="bio-portrait" alt="Carle">
-    </div>
+        <div class="bio-section">
+            <div class="bio-text">
+                <h2>Carle's Story</h2>
+                <p><strong>July 9, 1948 – March 18, 2022</strong></p>
+                <div id="bio-content-him">Loading story...</div>
+            </div>
+            <img src="hero-carle.jpg" class="bio-portrait" alt="Carle">
+        </div>
 
-    <div class="section-header" id="header-audio-him" style="display:none">Music & Audio</div>
-    <div class="audio-container" id="audio-him"></div>
+        <div class="section-header" id="header-audio-him" style="display:none">Music & Audio</div>
+        <div class="audio-container" id="audio-him"></div>
 
-    <div class="section-header">Remembering Carle</div>
-    <div class="tributes-container" id="tributes-him"></div>
+        <div class="section-header">Remembering Carle</div>
+        <div class="tributes-container" id="tributes-him"></div>
 
-    <div class="section-header">Gallery</div>
-    <div class="masonry" id="gallery-him"></div>
+        <div class="section-header">Gallery</div>
+        <div class="masonry" id="gallery-him"></div>
     </div>
 
     <footer>
-    In Loving Memory of Liz & Carle Duguid • 1947–2023 / 1948–2022
+        In Loving Memory of Liz & Carle Duguid • 1947–2023 / 1948–2022
     </footer>
 
     <script>
-    // ====
-    // --- CONFIGURATION ---
-    // ====
-    
-    const GITHUB_USERNAME = 'lizandcarle'; 
-    const REPO_NAME = 'memorial'; 
-    
-    // --- LIVE MODE (Must be TRUE for GitHub) ---
-    const USE_GITHUB_DATA = true; 
-    
-    // --- MAX PHOTOS PER PAGE (To keep it fast) ---
-    const MAX_PHOTOS = 30;
+        // ==========================================
+        // --- CONFIGURATION ---
+        // ==========================================
+        
+        const GITHUB_USERNAME = 'lizandcarle'; 
+        const REPO_NAME = 'memorial'; 
+        
+        // --- LIVE MODE (Must be TRUE for GitHub) ---
+        const USE_GITHUB_DATA = true; 
+        
+        // --- MAX PHOTOS PER PAGE (To keep it fast) ---
+        const MAX_PHOTOS = 30;
 
-    // ====
+        // ==========================================
 
-    function showSection(id) {
-    document.querySelectorAll('.container').forEach(div => div.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
-    document.getElementById('btn-' + id).classList.add('active');
-    }
+        function showSection(id) {
+            document.querySelectorAll('.container').forEach(div => div.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + id).classList.add('active');
+        }
 
-    function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-    }
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
 
-    // --- BIO LOADER ---
-    async function loadBio(filename, elementId) {
-    const container = document.getElementById(elementId);
-    const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/bios/${filename}`;
+        // --- BIO LOADER ---
+        async function loadBio(filename, elementId) {
+            const container = document.getElementById(elementId);
+            const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/bios/${filename}`;
 
-    try {
-    const response = await fetch(apiUrl);
-    if (!response.ok) throw new Error('Bio not found');
-    
-    const fileData = await response.json();
-    const textResponse = await fetch(fileData.download_url);
-    const textContent = await textResponse.text();
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error('Bio not found');
+                
+                const fileData = await response.json();
+                const textResponse = await fetch(fileData.download_url);
+                const textContent = await textResponse.text();
 
-    const formattedText = textContent
-    .split('\n')
-    .filter(line => line.trim() !== '') 
-    .map(line => `<p>${line}</p>`)
-    .join('');
+                const formattedText = textContent
+                    .split('\n')
+                    .filter(line => line.trim() !== '') 
+                    .map(line => `<p>${line}</p>`)
+                    .join('');
 
-    container.innerHTML = formattedText;
-    } catch (error) {
-    console.log('Error loading bio:', error);
-    container.innerHTML = "<p>Story coming soon...</p>";
-    }
-    }
+                container.innerHTML = formattedText;
+            } catch (error) {
+                console.log('Error loading bio:', error);
+                container.innerHTML = "<p>Story coming soon...</p>";
+            }
+        }
 
-    // --- AUDIO LOADER ---
-    async function loadAudio(folderName, elementId) {
-    const container = document.getElementById(elementId);
-    const header = document.getElementById('header-' + elementId);
-    container.innerHTML = '';
+        // --- AUDIO LOADER ---
+        async function loadAudio(folderName, elementId) {
+            const container = document.getElementById(elementId);
+            const header = document.getElementById('header-' + elementId);
+            container.innerHTML = '';
 
-    const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/audio/${folderName}`;
+            const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/audio/${folderName}`;
 
-    try {
-    const response = await fetch(apiUrl);
-    if (!response.ok) return;
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) return;
 
-    const files = await response.json();
-    const audioFiles = files.filter(file => file.name.endsWith('.mp3'));
-    
-    if (audioFiles.length === 0) return;
-    if(header) header.style.display = 'block';
+                const files = await response.json();
+                const audioFiles = files.filter(file => file.name.endsWith('.mp3'));
+                
+                if (audioFiles.length === 0) return;
+                if(header) header.style.display = 'block';
 
-    for (const audioFile of audioFiles) {
-    const baseName = audioFile.name.replace('.mp3', '');
-    let description = '';
-    const textFile = files.find(f => f.name === baseName + '.txt');
-    
-    if (textFile) {
-    try {
-    const textResp = await fetch(textFile.download_url);
-    description = await textResp.text();
-    } catch (e) { console.log('Error fetching audio text'); }
-    }
+                for (const audioFile of audioFiles) {
+                    const baseName = audioFile.name.replace('.mp3', '');
+                    let description = '';
+                    const textFile = files.find(f => f.name === baseName + '.txt');
+                    
+                    if (textFile) {
+                        try {
+                            const textResp = await fetch(textFile.download_url);
+                            description = await textResp.text();
+                        } catch (e) { console.log('Error fetching audio text'); }
+                    }
 
-    const title = description ? baseName.replace(/_/g, ' ') : baseName.replace(/_/g, ' ');
-    const descHtml = description ? `<div class="audio-desc">"${description}"</div>` : '';
+                    const title = description ? baseName.replace(/_/g, ' ') : baseName.replace(/_/g, ' ');
+                    const descHtml = description ? `<div class="audio-desc">"${description}"</div>` : '';
 
-    const html = `
-    <div class="audio-card">
-    <div class="audio-title">${title}</div>
-    ${descHtml}
-    <audio controls>
-    <source src="${audioFile.download_url}" type="audio/mpeg">
-    Your browser does not support the audio element.
-    </audio>
-    </div>
-    `;
-    container.innerHTML += html;
-    }
-    } catch (error) { console.log('No audio found for ' + folderName); }
-    }
+                    const html = `
+                        <div class="audio-card">
+                            <div class="audio-title">${title}</div>
+                            ${descHtml}
+                            <audio controls>
+                                <source src="${audioFile.download_url}" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    `;
+                    container.innerHTML += html;
+                }
+            } catch (error) { console.log('No audio found for ' + folderName); }
+        }
 
-    // --- TRIBUTE LOADER ---
-    async function loadTributes(folderName, elementId) {
-    const container = document.getElementById(elementId);
-    container.innerHTML = ''; 
+        // --- TRIBUTE LOADER ---
+        async function loadTributes(folderName, elementId) {
+            const container = document.getElementById(elementId);
+            container.innerHTML = ''; 
 
-    const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/tributes/${folderName}`;
-    
-    try {
-    const response = await fetch(apiUrl);
-    if (!response.ok) return;
-    
-    const files = await response.json();
-    const textFiles = files.filter(file => file.name.endsWith('.txt'));
-    shuffle(textFiles);
+            const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/tributes/${folderName}`;
+            
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) return;
+                
+                const files = await response.json();
+                const textFiles = files.filter(file => file.name.endsWith('.txt'));
+                shuffle(textFiles);
 
-    for (const file of textFiles) {
-    const textResponse = await fetch(file.download_url);
-    const textContent = await textResponse.text();
-    let authorHtml = '';
-    if (!file.name.toLowerCase().startsWith('anon')) {
-    const authorName = file.name.replace('.txt', '').replace(/_/g, ' ');
-    authorHtml = `<div class="tribute-author">— ${authorName}</div>`;
-    }
-    const html = `<div class="tribute-card"><div class="tribute-text">"${textContent}"</div>${authorHtml}</div>`;
-    container.innerHTML += html;
-    }
-    } catch (error) { console.log('No tributes for ' + folderName); }
-    }
+                for (const file of textFiles) {
+                    const textResponse = await fetch(file.download_url);
+                    const textContent = await textResponse.text();
+                    let authorHtml = '';
+                    if (!file.name.toLowerCase().startsWith('anon')) {
+                        const authorName = file.name.replace('.txt', '').replace(/_/g, ' ');
+                        authorHtml = `<div class="tribute-author">— ${authorName}</div>`;
+                    }
+                    const html = `<div class="tribute-card"><div class="tribute-text">"${textContent}"</div>${authorHtml}</div>`;
+                    container.innerHTML += html;
+                }
+            } catch (error) { console.log('No tributes for ' + folderName); }
+        }
 
-    // --- IMAGE LOADER (UPDATED WITH LIMIT) ---
-    async function loadImages(folderName, elementId) {
-    const container = document.getElementById(elementId);
-    const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/images/${folderName}`;
+        // --- IMAGE LOADER (UPDATED WITH LIMIT) ---
+        async function loadImages(folderName, elementId) {
+            const container = document.getElementById(elementId);
+            const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/images/${folderName}`;
 
-    try {
-    const response = await fetch(apiUrl);
-    if (!response.ok) return;
-    
-    const files = await response.json();
-    // Supports JPG, JPEG, PNG, GIF, WEBP
-    const imageFiles = files.filter(file => file.name.match(/\.(jpg|jpeg|png|gif|webp)$/i));
-    
-    // 1. Shuffle ALL images
-    shuffle(imageFiles);
-    
-    // 2. Take only the first MAX_PHOTOS (e.g. 30)
-    const selectedImages = imageFiles.slice(0, MAX_PHOTOS);
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) return;
+                
+                const files = await response.json();
+                // Supports JPG, JPEG, PNG, GIF, WEBP
+                const imageFiles = files.filter(file => file.name.match(/\.(jpg|jpeg|png|gif|webp)$/i));
+                
+                // 1. Shuffle ALL images
+                shuffle(imageFiles);
+                
+                // 2. Take only the first MAX_PHOTOS (e.g. 30)
+                const selectedImages = imageFiles.slice(0, MAX_PHOTOS);
 
-    selectedImages.forEach(file => {
-    const img = document.createElement('img');
-    img.src = file.download_url;
-    img.loading = "lazy";
-    container.appendChild(img);
-    });
-    } catch (error) { console.log('No images for ' + folderName); }
-    }
+                selectedImages.forEach(file => {
+                    const img = document.createElement('img');
+                    img.src = file.download_url;
+                    img.loading = "lazy";
+                    container.appendChild(img);
+                });
+            } catch (error) { console.log('No images for ' + folderName); }
+        }
 
-    document.addEventListener('DOMContentLoaded', () => {
-    loadBio('couple.txt', 'bio-content-couple');
-    loadBio('her.txt', 'bio-content-her');
-    loadBio('him.txt', 'bio-content-him');
+        document.addEventListener('DOMContentLoaded', () => {
+            loadBio('couple.txt', 'bio-content-couple');
+            loadBio('her.txt', 'bio-content-her');
+            loadBio('him.txt', 'bio-content-him');
 
-    ['couple', 'her', 'him'].forEach(section => {
-    loadImages(section, `gallery-${section}`);
-    loadTributes(section, `tributes-${section}`);
-    loadAudio(section, `audio-${section}`);
-    });
-    });
+            ['couple', 'her', 'him'].forEach(section => {
+                loadImages(section, `gallery-${section}`);
+                loadTributes(section, `tributes-${section}`);
+                loadAudio(section, `audio-${section}`);
+            });
+        });
     </script>
 </body>
 </html>
