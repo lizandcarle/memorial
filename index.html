@@ -302,7 +302,7 @@
             <img src="hero-liz.jpg" class="bio-portrait" alt="Liz">
             <div class="bio-text">
                 <h2>Liz's Story</h2>
-                <p><strong>19XX - 20XX</strong></p> 
+                <p><strong>October 23, 1947 – May 31, 2023</strong></p> 
                 <div id="bio-content-her">Loading story...</div>
             </div>
         </div>
@@ -321,7 +321,7 @@
         <div class="bio-section">
             <div class="bio-text">
                 <h2>Carle's Story</h2>
-                <p><strong>19XX - 20XX</strong></p>
+                <p><strong>July 9, 1948 – March 18, 2022</strong></p>
                 <div id="bio-content-him">Loading story...</div>
             </div>
             <img src="hero-carle.jpg" class="bio-portrait" alt="Carle">
@@ -349,7 +349,7 @@
         const GITHUB_USERNAME = 'lizandcarle'; 
         const REPO_NAME = 'memorial'; 
         
-        // --- IMPORTANT: THIS IS NOW SET TO TRUE PERMANENTLY ---
+        // --- THIS IS THE "FOREVER" SETTING. DO NOT CHANGE. ---
         const USE_GITHUB_DATA = true; 
 
         // ==========================================
@@ -506,7 +506,6 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Load Content
             loadBio('couple.txt', 'bio-content-couple');
             loadBio('her.txt', 'bio-content-her');
             loadBio('him.txt', 'bio-content-him');
