@@ -349,7 +349,7 @@
         const GITHUB_USERNAME = 'lizandcarle'; 
         const REPO_NAME = 'memorial'; 
         
-        // --- THIS IS THE "FOREVER" SETTING. DO NOT CHANGE. ---
+        // --- IMPORTANT: THIS IS NOW SET TO TRUE PERMANENTLY ---
         const USE_GITHUB_DATA = true; 
 
         // ==========================================
@@ -369,10 +369,12 @@
             return array;
         }
 
-        // --- BIO LOADER ---
+        // --- NEW: BIO LOADER (Single Text File) ---
         async function loadBio(filename, elementId) {
             const container = document.getElementById(elementId);
             
+            // NOTE: When running nicely on your Mac, this will fail (Security).
+            // It will only work when uploaded to GitHub.
             const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/bios/${filename}`;
 
             try {
@@ -380,12 +382,15 @@
                 if (!response.ok) throw new Error('Bio not found');
                 
                 const fileData = await response.json();
+                
+                // Now fetch the raw text content
                 const textResponse = await fetch(fileData.download_url);
                 const textContent = await textResponse.text();
 
+                // Convert new lines to paragraph tags for nice formatting
                 const formattedText = textContent
                     .split('\n')
-                    .filter(line => line.trim() !== '') 
+                    .filter(line => line.trim() !== '') // Remove empty lines
                     .map(line => `<p>${line}</p>`)
                     .join('');
 
@@ -501,6 +506,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            // Load Content
             loadBio('couple.txt', 'bio-content-couple');
             loadBio('her.txt', 'bio-content-her');
             loadBio('him.txt', 'bio-content-him');
