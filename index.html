@@ -3,6 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="In loving memory of Liz and Carle Duguid. A celebration of their lives, stories, and the legacy they left behind. Obituary and memorial gallery.">
+    <meta name="keywords" content="Liz Duguid, Carle Duguid, obituary, memorial, death, passed away, life story, tribute, Canada">
+    <meta name="robots" content="index, follow">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Memorial",
+      "name": "Memorial for Liz & Carle Duguid",
+      "description": "Obituary and photo gallery for Liz and Carle Duguid.",
+      "url": "https://lizandcarle.ca",
+      "sameAs": [
+        "https://lizandcarle.github.io/memorial/"
+      ]
+    }
+    </script>
+
     <title>In Loving Memory of Liz & Carle</title>
     <style>
         /* --- FONTS & COLORS --- */
@@ -349,8 +367,11 @@
         const GITHUB_USERNAME = 'lizandcarle'; 
         const REPO_NAME = 'memorial'; 
         
-        // --- THIS IS THE "FOREVER" SETTING. DO NOT CHANGE. ---
+        // --- LIVE MODE (Must be TRUE for GitHub) ---
         const USE_GITHUB_DATA = true; 
+        
+        // --- MAX PHOTOS PER PAGE (To keep it fast) ---
+        const MAX_PHOTOS = 30;
 
         // ==========================================
 
@@ -369,12 +390,9 @@
             return array;
         }
 
-        // --- NEW: BIO LOADER (Single Text File) ---
+        // --- BIO LOADER ---
         async function loadBio(filename, elementId) {
             const container = document.getElementById(elementId);
-            
-            // NOTE: When running nicely on your Mac, this will fail (Security).
-            // It will only work when uploaded to GitHub.
             const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/bios/${filename}`;
 
             try {
@@ -382,20 +400,16 @@
                 if (!response.ok) throw new Error('Bio not found');
                 
                 const fileData = await response.json();
-                
-                // Now fetch the raw text content
                 const textResponse = await fetch(fileData.download_url);
                 const textContent = await textResponse.text();
 
-                // Convert new lines to paragraph tags for nice formatting
                 const formattedText = textContent
                     .split('\n')
-                    .filter(line => line.trim() !== '') // Remove empty lines
+                    .filter(line => line.trim() !== '') 
                     .map(line => `<p>${line}</p>`)
                     .join('');
 
                 container.innerHTML = formattedText;
-
             } catch (error) {
                 console.log('Error loading bio:', error);
                 container.innerHTML = "<p>Story coming soon...</p>";
@@ -418,7 +432,6 @@
                 const audioFiles = files.filter(file => file.name.endsWith('.mp3'));
                 
                 if (audioFiles.length === 0) return;
-                
                 if(header) header.style.display = 'block';
 
                 for (const audioFile of audioFiles) {
@@ -448,10 +461,7 @@
                     `;
                     container.innerHTML += html;
                 }
-
-            } catch (error) {
-                console.log('No audio found for ' + folderName);
-            }
+            } catch (error) { console.log('No audio found for ' + folderName); }
         }
 
         // --- TRIBUTE LOADER ---
@@ -483,7 +493,7 @@
             } catch (error) { console.log('No tributes for ' + folderName); }
         }
 
-        // --- IMAGE LOADER ---
+        // --- IMAGE LOADER (UPDATED WITH LIMIT) ---
         async function loadImages(folderName, elementId) {
             const container = document.getElementById(elementId);
             const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/images/${folderName}`;
@@ -493,10 +503,16 @@
                 if (!response.ok) return;
                 
                 const files = await response.json();
+                // Supports JPG, JPEG, PNG, GIF, WEBP
                 const imageFiles = files.filter(file => file.name.match(/\.(jpg|jpeg|png|gif|webp)$/i));
+                
+                // 1. Shuffle ALL images
                 shuffle(imageFiles);
+                
+                // 2. Take only the first MAX_PHOTOS (e.g. 30)
+                const selectedImages = imageFiles.slice(0, MAX_PHOTOS);
 
-                imageFiles.forEach(file => {
+                selectedImages.forEach(file => {
                     const img = document.createElement('img');
                     img.src = file.download_url;
                     img.loading = "lazy";
