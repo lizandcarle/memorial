@@ -60,7 +60,7 @@
             height: 250px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: top; /* Keeps heads visible */
+            object-position: top; 
             margin-bottom: 20px;
             border: 4px solid var(--bg-color);
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -173,7 +173,7 @@
             padding-top: 20px;
         }
 
-        /* --- AUDIO CARDS --- */
+        /* --- AUDIO & VIDEO CARDS --- */
         .audio-container, .media-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -315,7 +315,7 @@
         <div class="section-header" id="header-audio-couple" style="display:none">Audio & Music</div>
         <div class="media-container" id="audio-couple"></div>
 
-        <div class="section-header">Thoughts from Family & Friends</div>
+        <div class="section-header" id="header-tributes-couple" style="display:none">Thoughts from Family & Friends</div>
         <div class="tributes-container" id="tributes-couple"></div>
 
         <div class="section-header">Gallery</div>
@@ -338,7 +338,7 @@
         <div class="section-header" id="header-audio-her" style="display:none">Audio Memories</div>
         <div class="media-container" id="audio-her"></div>
 
-        <div class="section-header">Remembering Liz</div>
+        <div class="section-header" id="header-tributes-her" style="display:none">Remembering Liz</div>
         <div class="tributes-container" id="tributes-her"></div>
 
         <div class="section-header">Gallery</div>
@@ -361,7 +361,7 @@
         <div class="section-header" id="header-audio-him" style="display:none">Music & Audio</div>
         <div class="media-container" id="audio-him"></div>
 
-        <div class="section-header">Remembering Carle</div>
+        <div class="section-header" id="header-tributes-him" style="display:none">Remembering Carle</div>
         <div class="tributes-container" id="tributes-him"></div>
 
         <div class="section-header">Gallery</div>
@@ -379,11 +379,7 @@
         
         const GITHUB_USERNAME = 'lizandcarle'; 
         const REPO_NAME = 'memorial'; 
-        
-        // --- LIVE MODE (Must be TRUE for GitHub) ---
         const USE_GITHUB_DATA = true; 
-        
-        // --- MAX PHOTOS PER PAGE (To keep it fast) ---
         const MAX_PHOTOS = 30;
 
         // ==========================================
@@ -509,6 +505,7 @@
         // --- TRIBUTE LOADER ---
         async function loadTributes(folderName, elementId) {
             const container = document.getElementById(elementId);
+            const header = document.getElementById('header-' + elementId);
             container.innerHTML = ''; 
 
             const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/tributes/${folderName}`;
@@ -519,6 +516,10 @@
                 
                 const files = await response.json();
                 const textFiles = files.filter(file => file.name.endsWith('.txt'));
+                
+                if (textFiles.length === 0) return;
+                if(header) header.style.display = 'block';
+
                 shuffle(textFiles);
 
                 for (const file of textFiles) {
